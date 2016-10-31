@@ -1,0 +1,6 @@
+nbproject/private/
+.directory
+/tests/logs/
+/tests/test.sqlite3
+_/
+.idea/
