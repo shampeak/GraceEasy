@@ -17,9 +17,9 @@
 	},
 	"require": {
 		"php":        ">=5.3.0",
-		"grace/server": "1.0.x-dev"
+		"grace/server": "gse"
 	},
-	"files": ["Application/Helper.php"],
+	"files": ["Grace/Helper.php"],
 	"psr-4":{
 		"Grace\\"         : "Grace"
 	}
