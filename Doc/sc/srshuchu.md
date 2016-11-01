@@ -33,7 +33,7 @@ $str = ['dog','cat','fox'];
 $str = saddslashes($str);
 ```
 
-## 安全 : xxs
+## 安全 : xss
 
 封装
 ```
