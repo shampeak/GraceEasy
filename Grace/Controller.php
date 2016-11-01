@@ -81,6 +81,7 @@ Array
             C('Router',$router);
             $_GET['c'] = $router['Controller'];
             $_GET['a'] = $router['Mothed'];
+            $_GET['r'] = $router['Controller'].'/'.$router['Mothed'];
         }
         //重置get
         return SELF::ControllerRun($router);

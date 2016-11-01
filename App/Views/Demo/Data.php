@@ -36,12 +36,14 @@
         <div class="col-sm-3 blog-sidebar">
             <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm  sidebar-module-inset" role="complementary" style="padding-top: 50px;">
                 <ul class="nav bs-sidenav">
+
+
                     <?php
-                    $list = \Grace\Controller::Run('home/menulist');
+                    $list = \Grace\Controller::Run('home/menusublist');
                     ?>
                     <?php foreach($list as $key=>$value):?>
-                    <li <?php if(get('key') == $key):?>class="active"<?php endif;?>>
-                        <a href="/?r=home/shouce&key=<?=$key;?>"><?=$value;?></a>
+                    <li <?php if(get('a') == ucwords($key)):?>class="active"<?php endif;?>>
+                        <a href="/?r=Demo/<?=$key;?>"><?=$value;?></a>
                     </li>
                     <?php endforeach;?>
                 </ul>
@@ -57,7 +59,7 @@
             <div class="blog-header">
                 <ol class="breadcrumb">
                     <li><a href="/">首页</a></li>
-                    <li class="active">手册</li>
+                    <li class="active">示例</li>
                 </ol>
             </div>
 
@@ -65,8 +67,62 @@
             <div class="blog-post"  id="s1">
                 <!-- 内容 -->
 
-                <?=$nr?>
+                <h2><?=$list[get('a')]?></h2>
+                <hr />
 
+
+
+
+                <hr />
+                <h2>获取模块数据</h2>
+<pre>
+$path = "demo/datatest";
+echo $Bootstrap::get($path);
+</pre>
+结果输出
+<pre>
+<?php
+$path = "demo/datatest";
+echo \Grace\Bootstrap::get($path);
+?>
+</pre>
+
+
+
+                <hr />
+                <h2>获取配置</h2>
+<pre>
+config();
+//可以加参数
+//config('Router');
+</pre>
+                结果
+<pre>
+<?php
+print_r(config());
+?>
+</pre>
+
+
+
+                <hr />
+<h2>路由信息</h2>
+<pre>
+$_ca="Demo/Data";
+$router = $router = \Grace\Router::GetRouter($_ca,$_params);
+//print_r($router)
+</pre>
+结果
+
+
+<pre>
+<?php
+$_ca="Demo/Data";
+$router = $router = \Grace\Router::GetRouter($_ca,$_params);
+print_r($router)
+?>
+</pre>
+<hr>
                 <!-- /内容 -->
 
             <hr>

@@ -41,7 +41,8 @@
     <!-- Jumbotron -->
     <div class="jumbotron">
         <h1>GraceEasy</h1>
-        <p class="lead">　　GraceEasy是一个免费、开源、敏捷的MVC模式的PHP开发框架。它易拓展而不失灵活，可以轻松对应大中小型项目。它没有大而全的功能，只给你最需要的底层功能，但是给你无限的灵活拓展能力。<a href="">详细介绍</a></p>
+        <p class="lead">　　GraceEasy是一个免费、开源、敏捷的MVC模式的PHP开发框架。它易拓展而不失灵活，可以轻松对应大中小型项目。它没有大而全的功能，只给你最需要的底层功能，但是给你无限的灵活拓展能力。
+            <a href="http://graceeasy.phpleague.cn/">详细介绍</a></p>
         <p><a class="btn btn-lg btn-success" href="https://github.com/shampeak/GraceEasy" role="button">Get started right now!</a></p>
     </div>
 

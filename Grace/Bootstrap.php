@@ -88,7 +88,7 @@ D($res);
 
 class Bootstrap {
 
-    public static function Get($ca,$params)             //调用控制器执行结果集
+    public static function Get($ca,$params = '')             //调用控制器执行结果集
     {
         $res = \Grace\Controller::Run($ca,$params);
         return $res;

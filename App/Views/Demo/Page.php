@@ -19,12 +19,15 @@
         SyntaxHighlighter.all();
     </script>
     <!-- /SyntaxHighlighter -->
-
 </head>
 
 <body>
 
 <?php include Config('Router')['View_Folder']."Public/Nav.php"; ?>
+
+<?php
+$list = \Grace\Controller::Run('home/menusublist');
+?>
 
 
 <div class="container" id="cbody">
@@ -33,43 +36,23 @@
 
     <div class="row">
 
+
         <div class="col-sm-3 blog-sidebar">
             <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm  sidebar-module-inset" role="complementary" style="padding-top: 50px;">
-                <!-- ul class="nav bs-sidenav">
-                    <li>
-                        <a href="#s1">GraceEasy简介</a>
+                <ul class="nav bs-sidenav">
+
+
+                    <?php foreach($list as $key=>$value):?>
+                    <li <?php if(get('a') == $key):?>class="active"<?php endif;?>>
+                        <a href="/?r=demo/<?=$key;?>"><?=$value;?></a>
                     </li>
-                    <li>
-                        <a href="#s2">目录结构</a>
-                    </li>
-                    <li>
-                        <a href="#s3">下载</a>
-                    </li>
-                    <li>
-                        <a href="#s4">安装</a>
-                    </li>
-                    <li>
-                        <a href="#s5">Hello World</a>
-                    </li>
+                    <?php endforeach;?>
                 </ul>
                 <!--  -->
                 <a class="back-to-top" href="#top">
                     返回顶部
                 </a>
             </div>
-
-            <!-- div class="sidebar-module sidebar-module-inset">
-                <h4>About</h4>
-                <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            </div -->
-            <!-- div class="sidebar-module">
-                <h4>相关</h4>
-                <ol class="list-unstyled">
-                    <li><a href="#">GitHub</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Facebook</a></li>
-                </ol>
-            </div -->
         </div><!-- /.blog-sidebar -->
 
         <div class="col-sm-8 blog-main">
@@ -79,55 +62,39 @@
                     <li><a href="/">首页</a></li>
                     <li class="active">示例</li>
                 </ol>
-
-                <h3 class="blog-title">代码示例</h3>
-                <p class="lead blog-description"></p>
             </div>
-
 
             <!-- 目录结构 -->
             <div class="blog-post"  id="s1">
-                <h2 class="blog-post-title">示例</h2>
-                <hr>
+                <!-- 内容 -->
 
-                <p>
-
-                </p>
-                <hr>
-                <p>
-                <pre>一些代码示例!</pre>
-                </p>
+                <h2><?=$list[get('a')]?></h2>
+                <hr />
 
 
-            </div><!-- /.blog-post -->
+                <p>终止：</p>
+<pre>
+halt();     //终止
+halt(404);  //404页面
+halt(500);  //500页面
+</pre>
 
 
+                <!-- /内容 -->
 
             <hr>
         </div><!-- /.blog-main -->
-
 
     </div><!-- /.row -->
 
 </div><!-- /.container -->
 
-
-
-
-
-
-
-
-
 <?php include Config('Router')['View_Folder']."Public/Footer.php"; ?>
-
 
 <script src="/assets/js/jquery-1.11.1.min.js"></script>
 <script src="/assets/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="/assets/js/holder.min.js"></script>
 <script src="/assets/js/docs.min.js"></script>
-
-
 
 </body>
 </html>

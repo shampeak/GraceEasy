@@ -8,7 +8,11 @@ class BaseController{
 
     }
 
-    public function domenulist(){
+    /**
+     * @return array
+     * 手册的二级菜单
+     */
+    public function doMenulist(){
         return [
             'readme'        => '简述',
             'srshuchu'      => '输入输出',
@@ -23,7 +27,14 @@ class BaseController{
             'shitu'         => '视图',
             'GraceServer'            => 'GraceServer',
         ];
+    }
 
+    public function doMenusublist(){
+        return [
+            'Luyou'        => '路由',
+            'Data'        => '数据调用',
+            'Page'        => '页面',
+        ];
     }
 
 

@@ -15,4 +15,30 @@ class Demo extends BaseController{
         view('');
     }
 
+    /**
+     * 路由
+     */
+    public function doLuyou(){
+        view('');
+    }
+
+
+    /**
+     * 内部数据调用
+     */
+    public function doData(){
+        view('');
+    }
+
+
+    public function doPage(){
+        view('');
+    }
+
+
+    public function doDatatest(){
+        return "这是 demo/datatest 的反馈内容";
+    }
+
+
 }

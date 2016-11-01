@@ -25,6 +25,10 @@
 
 <?php include Config('Router')['View_Folder']."Public/Nav.php"; ?>
 
+<?php
+$list = \Grace\Controller::Run('home/menusublist');
+?>
+
 
 <div class="container" id="cbody">
 
@@ -36,12 +40,11 @@
         <div class="col-sm-3 blog-sidebar">
             <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm  sidebar-module-inset" role="complementary" style="padding-top: 50px;">
                 <ul class="nav bs-sidenav">
-                    <?php
-                    $list = \Grace\Controller::Run('home/menulist');
-                    ?>
+
+
                     <?php foreach($list as $key=>$value):?>
-                    <li <?php if(get('key') == $key):?>class="active"<?php endif;?>>
-                        <a href="/?r=home/shouce&key=<?=$key;?>"><?=$value;?></a>
+                    <li <?php if(get('a') == $key):?>class="active"<?php endif;?>>
+                        <a href="/?r=demo/<?=$key;?>"><?=$value;?></a>
                     </li>
                     <?php endforeach;?>
                 </ul>
@@ -57,7 +60,7 @@
             <div class="blog-header">
                 <ol class="breadcrumb">
                     <li><a href="/">首页</a></li>
-                    <li class="active">手册</li>
+                    <li class="active">示例</li>
                 </ol>
             </div>
 
@@ -65,7 +68,41 @@
             <div class="blog-post"  id="s1">
                 <!-- 内容 -->
 
-                <?=$nr?>
+                <h2><?=$list[get('a')]?></h2>
+                <hr />
+
+
+                <p>浏览器地址：</p>
+                <p><code>/?r=Demo/Luyou</code></p>
+                <p>或者：<code>/?c=Demo&amp;a=Luyou </code></p>
+
+                <p>路由结果：</p>
+                <p>由<small><code> $router = \Grace\Router::GetRouter($_ca,$_params);</code> </small>输出</p>
+
+
+<?php
+$nr = "";
+$html = server('Parsedown')->text($nr);
+$html = str_replace('<pre>','<pre  class="brush: php;">',$html);
+//$html = str_replace('<code>','',$html);
+//$html = str_replace('</code>','',$html);
+echo $html;
+?>
+
+浏览器地址 ：
+
+
+<pre class="brush: php;">
+<?php
+$router = \Grace\Router::GetRouter($_ca,$_params);
+print_r($router);
+?>
+</pre>
+<p>
+注意 ： r参数拆出c和a覆盖c和a参数的内容
+</p>
+> 对应的控制器为： <code>Demo/Luyou</code>
+
 
                 <!-- /内容 -->
 

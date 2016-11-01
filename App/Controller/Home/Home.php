@@ -53,13 +53,4 @@ class Home extends BaseController{
         view('');
     }
 
-    /**
-     * 示例
-     */
-    public function doShili($params = []){
-
-
-        view('');
-    }
-
 }

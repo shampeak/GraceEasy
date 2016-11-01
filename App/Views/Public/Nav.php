@@ -11,24 +11,43 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li <?php if(get('a') == 'Index' || get('a') == '' ): ?>class="active"<?php endif; ?>><a href="/">首页</a></li>
-                <li <?php if(get('a') == 'Jianjie'): ?>class="active"<?php endif; ?>><a href="/?r=home/jianjie">简介</a></li>
-                <li class="dropdown <?php if(get('a') == 'Shouce'): ?>active<?php endif; ?>" >
+                <li <?php if(get('r') == 'Home/Index' || get('a') == '' ): ?>class="active"<?php endif; ?>><a href="/">首页</a></li>
+                <li <?php if(get('r') == 'Home/Jianjie'): ?>class="active"<?php endif; ?>><a href="/?r=home/jianjie">简介</a></li>
+
+                <!-- 手册 -->
+                <li class="dropdown <?php if(get('r') == 'Home/Shouce'): ?>active<?php endif; ?>" >
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">手册 <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
 <?php
 $list = \Grace\Controller::Run('home/menulist');
-//$list = $this->domenulist();
 ?>
 <?php foreach($list as $key=>$value):?>
-    <li <?php if(get('key') == $key):?>class="active"<?php endif;?>>
+    <li <?php if(get('r')=='Home/Shouce' && get('key') == $key):?>class="active"<?php endif;?>>
         <a href="/?r=home/shouce&key=<?=$key;?>"><?=$value;?></a>
     </li>
 <?php endforeach;?>
                     </ul>
                 </li>
-                <!-- li <?php if(get('a') == 'Kaifawd'): ?>class="active"<?php endif; ?>><a href="/?r=home/kaifawd">开发文档</a></li -->
-                <li <?php if(get('a') == 'Shili'): ?>class="active"<?php endif; ?>><a href="/?r=home/shili">示例</a></li>
+                <!-- /手册 -->
+
+                <!-- li <?php if(get('r') == 'Home/Kaifawd'): ?>class="active"<?php endif; ?>><a href="/?r=home/kaifawd">开发文档</a></li -->
+
+                <!-- 示例 -->
+                <li class="dropdown <?php if(get('c') == 'Demo'): ?>active<?php endif; ?>" >
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">示例 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <?php
+                        $list2 = \Grace\Controller::Run('home/menusublist');
+                        ?>
+                        <?php foreach($list2 as $key=>$value):?>
+                            <li <?php if(get('c')=='Demo' && get('a') == ucwords($key)):?>class="active"<?php endif;?>>
+                                <a href="/?r=Demo/<?=$key;?>"><?=$value;?></a>
+                            </li>
+                        <?php endforeach;?>
+                    </ul>
+                </li>
+                <!-- /示例 -->
+
                 <li><a href="/?r=home/jianjie#s3">源码与下载</a></li>
 
             </ul>
