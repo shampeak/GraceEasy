@@ -102,7 +102,7 @@
                     <li>简单的API
                     <li><a href="https://tools.ietf.org/html/rfc3986" target="_blank">RFC3986</a> 编码规范
                     <li> 遵循<a href="http://www.php-fig.org/psr/psr-7/" target="_blank">PSR-7</a>日志接口
-                    <li> <a href="https://github.com/shampeak" target="_blank">全文档</a>支持文档
+                    <li> <a href="https://github.com/shampeak" target="_blank">全文档</a>支持
                     <li>组件框架无关[组件可以分离出来单独使用,有独立的文档和测试代码支持]；
                     <li> <a href="https://getcomposer.org" target="_blank">Composer</a>支持
                     <li>遵循<a href="http://www.php-fig.org/psr/psr-2/" target="_blank">PSR-2</a>和<a href="http://www.php-fig.org/psr/psr-4/" target="_blank">PSR-4</a>规范

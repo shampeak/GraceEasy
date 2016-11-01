@@ -51,22 +51,25 @@
 
     <div class="row" style="text-align: center;padding-top: 50px;padding-bottom: 50px;">
         <div class="col-lg-4" style="text-align: center;">
+            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" style="width: 140px; height: 140px;">
             <h2>简单</h2>
             <p>
-                抛弃不常用的繁杂的功能,只保留基础功能,是代码简洁,易于拓展和使用!
+                抛弃不常用的繁杂的功能,值保留基础功能,是代码简洁,易于拓展和使用!
             </p>
 
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4" style="text-align: center;">
+            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" style="width: 140px; height: 140px;">
             <h2>灵活</h2>
             <p>
                 所有代码层层封装,灵活配置和调用
             </p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4" style="text-align: center;">
+            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" style="width: 140px; height: 140px;">
             <h2>可靠</h2>
             <p>
-                单元测试
+                单元测试,
             </p>
         </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
@@ -75,6 +78,7 @@
 
     <div class="row" style="text-align: center;padding-top: 50px;padding-bottom: 50px;">
         <div class="col-lg-4" style="text-align: center;">
+            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" style="width: 140px; height: 140px;">
             <h2>轻量级</h2>
             <p>
                 整个代码加起来只有300K,真正的轻量级!
@@ -82,12 +86,14 @@
         </div><!-- /.col-lg-4 -->
 
         <div class="col-lg-4" style="text-align: center;">
+            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" style="width: 140px; height: 140px;">
             <h2>模块化</h2>
             <p>
                 低耦合,模块化,维护和使用都很方便
             </p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4" style="text-align: center;">
+            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" style="width: 140px; height: 140px;">
             <h2>全文档支持</h2>
             <p>
                 完善的说明文档!
@@ -98,6 +104,38 @@
 
     <hr class="featurette-divider">
 
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">说点什么呢. <span class="text-muted">小标题.</span></h2>
+            <p class="lead">
+                say something !
+                say something !
+                say something !
+
+            </p>
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-7">
+            <h2 class="featurette-heading">说点什么呢. <span class="text-muted">小标题.</span></h2>
+            <p class="lead">
+                say something !
+                say something !
+                say something !
+            </p>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
 
 
 </div> <!-- /container -->
