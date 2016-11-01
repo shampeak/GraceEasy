@@ -39,7 +39,7 @@
                         <a target="_blank">单元测试</a>
                         <a target="_blank">ESB</a>
                         <a target="_blank">封装</a>
-                        <a target="_blank">php-fig</a>
+                        <a target="_blank">PHP-FIG</a>
                         <a target="_blank">UML</a>
                         <a target="_blank">命名空间</a>
                         <a target="_blank">E-R图</a>

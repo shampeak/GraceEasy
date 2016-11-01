@@ -33,8 +33,8 @@ $list = \Grace\Controller::Run('home/menulist');
 
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a target="_blank">PHP学习</a></li>
-                <li><a target="_blank">关于</a></li>
+                <li><a href="http://www.phptherightway.com/" target="_blank">PHP学习</a></li>
+                <li><a href="http://www.phpleague.cn/" target="_blank">关于</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
